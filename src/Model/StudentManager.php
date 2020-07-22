@@ -23,4 +23,14 @@ class StudentManager
         }
         return $students;
     }
+    function add($student)
+    {
+        $sql = "INSERT INTO `tbl_students` (`student_name`, `class`, `phone`, `address`) VALUES (:student_name, :class, :phone, :address)";
+        $statement = $this->database->prepare($sql);
+        $statement->bindParam(':student_name', $student->getName());
+        $statement->bindParam(':class', $student->getClass());
+        $statement->bindParam(':phone', $student->getPhone());
+        $statement->bindParam(':address', $student->getAddress());
+        $statement->execute();
+    }
 }

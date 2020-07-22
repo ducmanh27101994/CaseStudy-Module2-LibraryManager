@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <a href="index.php?page=add-student">Add Student</a>
     <table>
         <tr>
             <th>STT</th>
