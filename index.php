@@ -4,6 +4,8 @@ use Lib\Controller\StudentController;
 
 require __DIR__ . "/vendor/autoload.php";
 $studentController = new StudentController();
+$borrowController = new \Lib\Controller\BorrowController();
+
 $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : "";
 ?>
 <!doctype html>
@@ -16,6 +18,9 @@ $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : "";
     <title>Document</title>
 </head>
 <body>
+<?php include_once 'src/View/Menu/menu.php'; ?>
+<br>
+<hr/>
 <?php
 switch ($page) {
     case 'list-student':
@@ -29,6 +34,9 @@ switch ($page) {
         break;
     case 'delete-student':
         $studentController->deleteStudent();
+        break;
+    case 'list-borrow':
+        $borrowController->viewAllBorrow();
         break;
     default:
         $studentController->viewStudent();
