@@ -31,4 +31,22 @@ class StudentController
             header('location:index.php?page=list-student');
         }
     }
+    function updateStudent()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+            $id = $_REQUEST['id'];
+            $student = $this->studentManager->getStudentById($id);
+            include_once('src/View/tbl_students/update.php');
+        } else {
+            $id = $_REQUEST['id'];
+            $student_name = $_POST['name'];
+            $class = $_REQUEST['class'];
+            $phone = $_REQUEST['phone'];
+            $address = $_REQUEST['address'];
+            $student = new Student($student_name, $class, $phone, $address);
+            $student->setId($id);
+            $this->studentManager->update($student);
+            header('location:index.php?page=list-student');
+        }
+    }
 }
