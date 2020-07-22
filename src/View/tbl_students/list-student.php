@@ -30,6 +30,7 @@
                     <td><?php echo $student->getPhone() ?></td>
                     <td><?php echo $student->getAddress() ?></td>
                     <td><a href="index.php?page=update-student&id=<?php echo $student->getId() ?>">Update</a></td>
+                    <td><a href="index.php?page=delete-student&id=<?php echo $student->getId() ?>">Delete</a></td>
                 </tr>
             <?php endforeach; ?>
         <?php endif; ?>

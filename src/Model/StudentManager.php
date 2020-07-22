@@ -53,5 +53,11 @@ class StudentManager
         $student = $statement->fetch();
         return $student;
     }
-    
+    function delete($id)
+    {
+        $sql = "DELETE FROM `tbl_students` WHERE `id` = :id";
+        $statement = $this->database->prepare($sql);
+        $statement->bindParam(':id', $id);
+        $statement->execute();
+    }
 }

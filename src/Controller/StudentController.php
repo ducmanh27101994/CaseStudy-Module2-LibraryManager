@@ -49,4 +49,12 @@ class StudentController
             header('location:index.php?page=list-student');
         }
     }
+    function deleteStudent()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+            $id = $_REQUEST['id'];
+            $this->studentManager->delete($id);
+            header('location:index.php?page=list-student');
+        }
+    }
 }

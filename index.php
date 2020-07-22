@@ -15,6 +15,9 @@ switch ($page) {
     case 'update-student':
         $studentController->updateStudent();
         break;
+    case 'delete-student':
+        $studentController->deleteStudent();
+        break;
     default:
         $studentController->viewStudent();
 }
