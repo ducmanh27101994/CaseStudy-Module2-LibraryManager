@@ -12,7 +12,7 @@ class BookManager
     }
     function getAll()
     {
-        $sql = "SELECT * FROM `tbl_books`";
+        $sql = "SELECT * FROM `tbl_books` ORDER BY `id` DESC";
         $statement = $this->database->query($sql);
         $data = $statement->fetchAll();
         $books = [];
@@ -22,5 +22,16 @@ class BookManager
             array_push($books, $book);
         }
         return $books;
+    }
+    function add($book)
+    {
+        $sql = "INSERT INTO `tbl_books`(`book_name`, `author`, `status`, `image`, `category_id`) VALUES (:book_name,:author,:status,:image,:category_id)";
+        $statement = $this->database->prepare($sql);
+        $statement->bindParam(':book_name', $book->getBook_name());
+        $statement->bindParam(':author', $book->getAuthor());
+        $statement->bindParam(':status', $book->getStatus());
+        $statement->bindParam(':image', $book->getImage());
+        $statement->bindParam(':category_id', $book->getCategory_id());
+        $statement->execute();
     }
 }

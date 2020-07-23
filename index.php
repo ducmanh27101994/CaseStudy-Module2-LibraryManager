@@ -54,6 +54,9 @@ $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : "";
         case 'list-book':
             $bookController->viewBook();
             break;
+        case 'add-book':
+            $bookController->addBook();
+            break;
         case 'list-borrow':
             $borrowController->viewAllBorrow();
             break;
