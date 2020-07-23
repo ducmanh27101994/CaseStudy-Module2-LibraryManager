@@ -80,7 +80,22 @@ class BorrowManager
             array_push($arr, $borrow);
         }
         return $arr;
+    }
 
+    function searchDateBorrow($return_date1,$return_date2){
+        $sql = "SELECT * FROM `tbl_borrows` WHERE `return_date` BETWEEN :return_date1 AND :return_date2";
+        $statement = $this->databaseBorrow->connect()->prepare($sql);
+        $statement->bindValue(':return_date1',$return_date1);
+        $statement->bindValue(':return_date2',$return_date2);
+        $statement->execute();
+        $data = $statement->fetchAll();
+        $arr = [];
+        foreach ($data as $item) {
+            $borrow = new Borrow($item['borrow_date'], $item['return_date'], $item['status'], $item['student_id']);
+            $borrow->setId($item['id']);
+            array_push($arr, $borrow);
+        }
+        return $arr;
     }
 
 
