@@ -8,3 +8,5 @@
 <a href="index.php?page=fullList-detail">Full List Borrow</a>
 <a href="index.php?page=borrowBook-detail">Borrow Books</a>
 <a href="index.php?page=giveBookBack-detail">Give Book Back</a>
+
+<a href="index.php?page=logOut">Log Out</a>

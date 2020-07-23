@@ -28,7 +28,7 @@ class UserController
 
     function logOut(){
         session_destroy();
-        header('location:login.php');
+        header('location:index.php');
     }
 
     function addUser(){
