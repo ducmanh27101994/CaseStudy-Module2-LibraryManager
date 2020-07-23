@@ -64,4 +64,11 @@ class DetailsController
         }
     }
 
+    function showGiveBookBack(){
+        if ($_SERVER['REQUEST_METHOD']=='GET'){
+            $details = $this->detailManager->showGiveBookBack();
+            include_once 'src/View/tbl_details/showGiveBookBack.php';
+        }
+    }
+
 }

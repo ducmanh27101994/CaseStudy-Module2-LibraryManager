@@ -1,10 +1,10 @@
 <form method="post" action="index.php">
         <select name="checkBorrow">
-            <option value="BOOK BORROWS">BOOK BORROWS</option>
-            <option value="RETURN BOOKS BORROWS">RETURN BOOKS BORROWS</option>
+            <option value="BOOK BORROWS">Borrow Books</option>
+            <option value="RETURN BOOKS BORROWS">Give Book Back</option>
         </select>
         <button type="submit">Submit</button>
-    </form>
+</form>
 
     <h2>Full Information Borrows Book</h2>
 
