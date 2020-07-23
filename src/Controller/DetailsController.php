@@ -48,7 +48,27 @@ class DetailsController
             $details = $this->detailManager->viewListDetailById($id);
             include_once 'src/View/tbl_details/detailById.php';
         }
+    }
 
+    function fullListDetail(){
+        if($_SERVER['REQUEST_METHOD']=='GET'){
+            $details = $this->detailManager->showFullListDetail();
+            include_once 'src/View/tbl_details/fullListDetails.php';
+        }
+    }
+
+    function showBorrowBook(){
+        if ($_SERVER['REQUEST_METHOD']=='GET'){
+            $details = $this->detailManager->showBorrowBook();
+            include_once 'src/View/tbl_details/showBookBorrow.php';
+        }
+    }
+
+    function showGiveBookBack(){
+        if ($_SERVER['REQUEST_METHOD']=='GET'){
+            $details = $this->detailManager->showGiveBookBack();
+            include_once 'src/View/tbl_details/showGiveBookBack.php';
+        }
     }
 
 }
