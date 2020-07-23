@@ -13,6 +13,7 @@ $borrowController = new \Lib\Controller\BorrowController();
 $categoryController = new CategoryController();
 $bookController = new BookController();
 $detailController = new \Lib\Controller\DetailsController();
+$userController = new \Lib\Controller\UserController();
 
 $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : "";
 
@@ -118,6 +119,9 @@ switch ($page) {
         break;
     case 'delete-detail':
         $detailController->deleteDetail();;
+        break;
+    case 'logOut':
+        $userController->logOut();
         break;
     default:
         $studentController->viewStudent();
