@@ -57,4 +57,11 @@ class DetailsController
         }
     }
 
+    function showBorrowBook(){
+        if ($_SERVER['REQUEST_METHOD']=='GET'){
+            $details = $this->detailManager->showBorrowBook();
+            include_once 'src/View/tbl_details/showBookBorrow.php';
+        }
+    }
+
 }

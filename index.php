@@ -95,6 +95,7 @@ $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : "";
         case 'fullList-detail':
             $detailController->fullListDetail();
             break;
+
         default:
             $studentController->viewStudent();
     }
