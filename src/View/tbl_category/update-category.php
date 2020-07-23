@@ -9,9 +9,9 @@
 
 <body>
     <form method="post">
-        <input type="text" name="id" value="<?php echo $category['id'] ?>" disabled />
         <input type="text" name="name" value="<?php echo $category['category_name'] ?>" placeholder="category name" />
-        <textarea name="comment" value="<?php echo $category['comment'] ?>" placeholder="comment"></textarea>
+        <input type="text" name="comment" value="<?php echo $category['comment'] ?>" placeholder="comment" />
+        <!-- <textarea name="comment" placeholder="comment"></textarea> -->
         <button type="submit">Update category</button>
     </form>
 </body>
