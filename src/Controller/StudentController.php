@@ -14,13 +14,13 @@ class StudentController
     }
     function viewStudent()
     {
-        $listStudent = $this->studentManager->getAll();
+        $students = $this->studentManager->getAll();
         include_once('src/View/tbl_students/list-student.php');
     }
     function addStudent()
     {
         if ($_SERVER['REQUEST_METHOD'] == 'GET')
-            include_once('src/View/tbl_students/add.php');
+            include_once('src/View/tbl_students/add-student.php');
         else {
             $name = $_REQUEST['name'];
             $class = $_REQUEST['class'];
@@ -36,7 +36,7 @@ class StudentController
         if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             $id = $_REQUEST['id'];
             $student = $this->studentManager->getStudentById($id);
-            include_once('src/View/tbl_students/update.php');
+            include_once('src/View/tbl_students/update-student.php');
         } else {
             $id = $_REQUEST['id'];
             $student_name = $_POST['name'];

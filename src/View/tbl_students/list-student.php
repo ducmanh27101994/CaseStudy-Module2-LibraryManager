@@ -17,12 +17,12 @@
             <th>Phone</th>
             <th>Address</th>
         </tr>
-        <?php if (empty($listStudent)) : ?>
+        <?php if (empty($students)) : ?>
             <tr>
                 <td>No data</td>
             </tr>
         <?php else : ?>
-            <?php foreach ($listStudent as $key => $student) : ?>
+            <?php foreach ($students as $key => $student) : ?>
                 <tr>
                     <td><?php echo ++$key ?></td>
                     <td><?php echo $student->getName() ?></td>
