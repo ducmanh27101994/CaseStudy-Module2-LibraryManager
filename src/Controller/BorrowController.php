@@ -43,4 +43,12 @@ class BorrowController
         }
     }
 
+    function deleteBorrow(){
+        if ($_SERVER['REQUEST_METHOD']=='GET'){
+            $id = $_REQUEST['id'];
+            $this->borrowManager->deleteBorrow($id);
+            header('location:index.php?page=list-borrow');
+        }
+    }
+
 }

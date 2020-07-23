@@ -21,6 +21,8 @@
         <td><?php echo $borrow->getBorrowDate() ?></td>
         <td><?php echo $borrow->getReturnDate() ?></td>
         <td><?php echo $borrow->getStatus() ?></td>
+        <td><a href="index.php?page=update-borrow&id=<?php echo $borrow->getId() ?>">Update Status</a></td>
+        <td><a href="index.php?page=delete-borrow&id=<?php echo $borrow->getId() ?>">Delete</a></td>
     </tr>
     <?php endforeach;?>
     <?php endif;?>
