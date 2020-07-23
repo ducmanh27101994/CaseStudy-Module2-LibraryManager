@@ -1,5 +1,6 @@
 <?php
 
+use Lib\Controller\BookController;
 use Lib\Controller\CategoryController;
 use Lib\Controller\StudentController;
 
@@ -7,6 +8,7 @@ require __DIR__ . "/vendor/autoload.php";
 $studentController = new StudentController();
 $borrowController = new \Lib\Controller\BorrowController();
 $categoryController = new CategoryController();
+$bookController = new BookController();
 $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : "";
 ?>
 <!doctype html>
@@ -48,6 +50,9 @@ $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : "";
             break;
         case 'delete-category':
             $categoryController->deleteCategory();
+            break;
+        case 'list-book':
+            $bookController->viewBook();
             break;
         case 'list-borrow':
             $borrowController->viewAllBorrow();
