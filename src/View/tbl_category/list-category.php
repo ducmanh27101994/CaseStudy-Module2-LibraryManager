@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <a href="index.php?page=add-category">Add Category</a>
     <table>
         <tr>
             <th>STT</th>

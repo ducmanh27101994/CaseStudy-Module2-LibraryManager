@@ -16,4 +16,15 @@ class CategoryController
         $listCategory = $this->categoryManager->getAll();
         include_once('src/View/tbl_category/list-category.php');
     }
+    function addCategory()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'GET')
+            include_once('src/View/tbl_category/add.php');
+        else {
+            $category_name = $_REQUEST['category_name'];
+            $comment = $_REQUEST['comment'];
+            $this->categoryManager->add($category);
+            header('index.php?page=list-category');
+        }
+    }
 }
