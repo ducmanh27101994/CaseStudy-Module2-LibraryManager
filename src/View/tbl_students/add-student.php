@@ -9,10 +9,10 @@
 
 <body>
     <form method="post">
-        <input type="text" name="name" placeholder="student name" />
-        <input type="text" name="class" placeholder="student class" />
-        <input type="text" name="phone" placeholder="student phone" />
-        <input type="text" name="address" placeholder="student address" />
+        <input type="text" name="name" placeholder="student name" required/>
+        <input type="text" name="class" placeholder="student class" required/>
+        <input type="text" name="phone" placeholder="student phone" required/>
+        <input type="text" name="address" placeholder="student address" required/>
         <button type="submit">Add Student</button>
     </form>
 </body>
