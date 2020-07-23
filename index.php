@@ -55,6 +55,9 @@ $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : "";
         case 'delete-borrow':
             $borrowController->deleteBorrow();
             break;
+        case 'update-borrow':
+            $borrowController->updateBorrow();
+            break;
         default:
             $studentController->viewStudent();
     }

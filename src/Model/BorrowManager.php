@@ -30,16 +30,34 @@ class BorrowManager
         $sql = "INSERT INTO `tbl_borrows`(`borrow_date`, `return_date`, `status`, `student_id`) VALUES (:borrow_date,:return_date,:status,:student_id)";
         $statement = $this->databaseBorrow->connect()->prepare($sql);
         $statement->bindParam(':borrow_date',$borrow->getBorrowDate());
-        $statement->bindParam('return_date',$borrow->getReturnDate());
-        $statement->bindParam('status',$borrow->getStatus());
-        $statement->bindParam('student_id',$borrow->getStudentId());
+        $statement->bindParam(':return_date',$borrow->getReturnDate());
+        $statement->bindParam(':status',$borrow->getStatus());
+        $statement->bindParam(':student_id',$borrow->getStudentId());
         $statement->execute();
     }
 
     function deleteBorrow($id){
         $sql = "DELETE FROM `tbl_borrows` WHERE `id`=:id";
         $statement = $this->databaseBorrow->connect()->prepare($sql);
-        $statement->bindParam('id',$id);
+        $statement->bindParam(':id',$id);
+        $statement->execute();
+    }
+
+    function getBorrowById($id){
+        $sql = "SELECT * FROM `tbl_borrows` WHERE `id`=:id";
+        $statement = $this->databaseBorrow->connect()->prepare($sql);
+        $statement->bindParam(':id',$id);
+        $statement->execute();
+        return $statement->fetch();
+    }
+
+    function updateBorrow($borrow){
+        $sql = "UPDATE `tbl_borrows` SET `id`=:id, `borrow_date`=:borrow_date, `return_date`=:return_date, `status`=:status WHERE `id`=:id";
+        $statement = $this->databaseBorrow->connect()->prepare($sql);
+        $statement->bindParam(':id',$borrow->getId());
+        $statement->bindParam(':borrow_date',$borrow->getBorrowDate());
+        $statement->bindParam(':return_date',$borrow->getReturnDate());
+        $statement->bindParam(':status',$borrow->getStatus());
         $statement->execute();
     }
 
