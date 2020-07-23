@@ -39,7 +39,7 @@ class BorrowController
 
             $borrow = new Borrow($borrow_date, $return_date, $status, $student_id);
             $this->borrowManager->addBorrow($borrow);
-            header('location:index.php?page=list-borrow');
+            header('location:index.php?page=add-detail');
         }
     }
 

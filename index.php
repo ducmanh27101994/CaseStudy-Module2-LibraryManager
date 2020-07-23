@@ -9,6 +9,8 @@ $studentController = new StudentController();
 $borrowController = new \Lib\Controller\BorrowController();
 $categoryController = new CategoryController();
 $bookController = new BookController();
+$detailController = new \Lib\Controller\DetailsController();
+
 $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : "";
 ?>
 <!doctype html>
@@ -74,6 +76,9 @@ $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : "";
             break;
         case 'search-borrow':
             $borrowController->searchBorrow();
+            break;
+        case 'add-detail':
+            $detailController->addDetail();
             break;
         default:
             $studentController->viewStudent();
