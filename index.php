@@ -62,6 +62,9 @@ $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : "";
         case 'delete-book':
             $bookController->deleteBook();
             break;
+        case 'update-book':
+            $bookController->updateBook();
+            break;
         case 'list-borrow':
             $borrowController->viewAllBorrow();
             break;

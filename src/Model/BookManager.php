@@ -41,5 +41,24 @@ class BookManager
         $statement->bindParam(':id', $id);
         $statement->execute();
     }
-    
+    function update($book)
+    {
+        $sql = "UPDATE `tbl_books` SET `book_name`=:book_name,`author`=:author,`status`=:status,`image`=:image,`category_id`=:category_id WHERE `id` = :id";
+        $statement = $this->database->prepare($sql);
+        $statement->bindParam(':book_name', $book->getBookName());
+        $statement->bindParam(':author', $book->getAuthor());
+        $statement->bindParam(':status', $book->getStatus());
+        $statement->bindParam(':image', $book->getImage());
+        $statement->bindParam(':category_id', $book->getCateory_id());
+        $statement->execute();
+    }
+    function getBookById($id)
+    {
+        $sql = "SELECT * FROM `tbl_books` WHERE `id` = :id";
+        $statement = $this->database->prepare($sql);
+        $statement->bindParam(':id', $id);
+        $statement->execute();
+        $book = $statement->fetch();
+        return $book;
+    }
 }

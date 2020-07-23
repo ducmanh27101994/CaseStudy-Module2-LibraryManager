@@ -29,6 +29,7 @@
                     <td><?php echo $book->getAuthor() ?></td>
                     <td><?php echo $book->getStatus() ?></td>
                     <td><img src="<?php echo $book->getImage() ?>" style="width: 50px; height: 70px" /></td>
+                    <td><a href="index.php?page=update-book&id=<?php echo $book->getId() ?>">Update</a></td>
                     <td><a href="index.php?page=delete-book&id=<?php echo $book->getId() ?>">Delete</a></td>
                 </tr>
             <?php endforeach; ?>
