@@ -86,6 +86,9 @@ $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : "";
         case 'list-detail':
             $detailController->viewListDetail();
             break;
+        case 'detail-id':
+            $detailController->viewDetailById();
+            break;
         default:
             $studentController->viewStudent();
     }

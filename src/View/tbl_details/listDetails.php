@@ -20,7 +20,7 @@
             <tr>
                 <td><?php echo ++$key ?></td>
                 <td>
-                    <a href="index.php?page=list-detailsId&id=<?php echo $detail['id'] ?>">
+                    <a href="index.php?page=detail-id&id=<?php echo $detail['id'] ?>">
                     <?php echo "Card: " . $detail["id"] ?></td>
                 </a>
                 <td><?php echo $detail["status"] ?></td>
