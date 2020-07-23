@@ -1,10 +1,13 @@
 <?php
-
+session_start();
 use Lib\Controller\BookController;
 use Lib\Controller\CategoryController;
 use Lib\Controller\StudentController;
 
 require __DIR__ . "/vendor/autoload.php";
+$auth = new \Lib\Mid\Auth();
+$auth->isLogin();
+
 $studentController = new StudentController();
 $borrowController = new \Lib\Controller\BorrowController();
 $categoryController = new CategoryController();
