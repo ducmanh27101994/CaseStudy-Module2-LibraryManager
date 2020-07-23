@@ -31,7 +31,14 @@ class DetailsController
             $book_id = $_REQUEST['book_id'];
             $borrow_id = $_REQUEST['borrow_id'];
             $this->detailManager->addDetail($book_id,$borrow_id);
-            header('location:index.php?page=list-borrow');
+            header('location:index.php?page=list-detail');
+        }
+    }
+
+    function viewListDetail(){
+        if ($_SERVER['REQUEST_METHOD']=='GET'){
+            $details = $this->detailManager->viewListDetail();
+            include_once 'src/View/tbl_details/listDetails.php';
         }
     }
 
