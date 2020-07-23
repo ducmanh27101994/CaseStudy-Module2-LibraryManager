@@ -14,7 +14,7 @@ class BorrowManager
     }
 
     function getAllBorrow(){
-        $sql = "SELECT * FROM `tbl_borrows`";
+        $sql = "SELECT * FROM `tbl_borrows` ORDER BY `id` desc ";
         $statement = $this->databaseBorrow->connect()->query($sql);
         $data = $statement->fetchAll();
         $arr = [];
@@ -29,12 +29,19 @@ class BorrowManager
     function addBorrow($borrow){
         $sql = "INSERT INTO `tbl_borrows`(`borrow_date`, `return_date`, `status`, `student_id`) VALUES (:borrow_date,:return_date,:status,:student_id)";
         $statement = $this->databaseBorrow->connect()->prepare($sql);
-//        $statement->bindParam(':id',$borrow->getId());
         $statement->bindParam(':borrow_date',$borrow->getBorrowDate());
         $statement->bindParam('return_date',$borrow->getReturnDate());
         $statement->bindParam('status',$borrow->getStatus());
         $statement->bindParam('student_id',$borrow->getStudentId());
         $statement->execute();
     }
+
+    function deleteBorrow($id){
+        $sql = "DELETE FROM `tbl_borrows` WHERE `id`=:id";
+        $statement = $this->databaseBorrow->connect()->prepare($sql);
+        $statement->bindParam('id',$id);
+        $statement->execute();
+    }
+
 
 }

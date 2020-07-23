@@ -52,6 +52,9 @@ $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : "";
         case 'add-borrow':
             $borrowController->addBorrow();
             break;
+        case 'delete-borrow':
+            $borrowController->deleteBorrow();
+            break;
         default:
             $studentController->viewStudent();
     }
