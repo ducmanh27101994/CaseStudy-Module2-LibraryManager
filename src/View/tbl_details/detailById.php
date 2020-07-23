@@ -1,5 +1,6 @@
 
 <h2>Borrowed Ticket Information</h2>
+<a href="index.php?page=add-detail">Add Books</a>
 <table>
     <tr>
         <th>Card Number</th>
