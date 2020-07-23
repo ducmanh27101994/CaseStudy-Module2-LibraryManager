@@ -66,6 +66,9 @@ $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : "";
         case 'update-borrow':
             $borrowController->updateBorrow();
             break;
+        case 'search-borrow':
+            $borrowController->searchBorrow();
+            break;
         default:
             $studentController->viewStudent();
     }
