@@ -15,20 +15,14 @@
             <th>Category Name</th>
             <th>Comment</th>
         </tr>
-        <?php if (empty($listCategory)) : ?>
+        <?php if (empty($categorys)) : ?>
             <tr>
                 <td>No data</td>
             </tr>
         <?php else : ?>
-            <?php foreach ($listCategory as $key => $category) : ?>
+            <?php foreach ($categorys as $key => $category) : ?>
                 <tr>
                     <td><?php echo ++$key ?></td>
                     <td><?php echo $category->getName() ?></td>
                     <td><?php echo $category->getComment() ?></td>
-                </tr>
-            <?php endforeach; ?>
-        <?php endif; ?>
-    </table>
-</body>
-
-</html>
+                    <td><a href="index.php?page=update-category&id=<?php echo $category->getId() ?>" </td> </tr> <?php endforeach; ?> <?php endif; ?> </table> </body> </html>
