@@ -1,5 +1,14 @@
 <a href="index.php?page=add-borrow">Add Borrow</a>
 
+<form method="post" action="index.php?page=search-borrow">
+    <input type="text" name="keyword-borrow" placeholder="Search Borrow">
+
+    <button type="submit">Search</button>
+    <button onclick="window.history.go(-1); return false;">Back</button>
+</form>
+
+
+
 <table>
     <tr>
         <th>STT</th>
