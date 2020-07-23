@@ -23,4 +23,11 @@ class BorrowController
         include_once 'src/View/tbl_borrows/listBorrow.php';
     }
 
+    function addBorrow(){
+        if ($_SERVER['REQUEST_METHOD']=='GET'){
+            $students = $this->studentManager->getAll();
+            include_once 'src/View/tbl_borrows/addBorrow.php';
+        }
+    }
+
 }
