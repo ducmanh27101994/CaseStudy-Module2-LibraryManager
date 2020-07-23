@@ -1,4 +1,3 @@
-
 <form method="post">
     <input type="datetime-local" name="borrow_date" placeholder="yyyy-mm-dd" required>
     <input type="datetime-local" name="return_date" placeholder="yyyy-mm-dd" required>
@@ -9,7 +8,7 @@
 
     <select name="student_id">
         <?php foreach ($students as $key => $student): ?>
-            <option value="<?php echo $student->getId(); ?>"><?php echo $student->getStudentName()." - " .$student->getClass(); ?></option>
+            <option value="<?php echo $student->getId(); ?>"><?php echo $student->getName()." - " .$student->getClass(); ?></option>
         <?php endforeach; ?>
     </select>
     <button type="submit">Submit</button>
