@@ -17,7 +17,7 @@
     <?php foreach ($borrows as $key =>$borrow):?>
     <tr>
         <td><?php echo ++$key ?></td>
-        <td><?php echo $borrow->getId() ?></td>
+        <td><?php echo "Card: ".$borrow->getId() ?></td>
         <td><?php echo $borrow->getBorrowDate() ?></td>
         <td><?php echo $borrow->getReturnDate() ?></td>
         <td><?php echo $borrow->getStatus() ?></td>

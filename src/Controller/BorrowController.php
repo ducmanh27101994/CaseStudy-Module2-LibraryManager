@@ -19,15 +19,17 @@ class BorrowController
         $this->studentManager = new StudentManager();
     }
 
-    function viewAllBorrow(){
+    function viewAllBorrow()
+    {
         $borrows = $this->borrowManager->getAllBorrow();
         include_once 'src/View/tbl_borrows/listBorrow.php';
     }
 
-    function addBorrow(){
-        if ($_SERVER['REQUEST_METHOD']=='GET'){
+    function addBorrow()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             $students = $this->studentManager->getAll();
-            include_once 'src/View/tbl_borrows/addBorrow.php';
+            include 'src/View/tbl_borrows/addBorrow.php';
         } else {
             $id = $_REQUEST['id'];
             $borrow_date = $_REQUEST['borrow_date'];
@@ -35,7 +37,7 @@ class BorrowController
             $status = $_REQUEST['status'];
             $student_id = $_REQUEST['student_id'];
 
-            $borrow = new Borrow($borrow_date,$return_date,$status,$student_id);
+            $borrow = new Borrow($borrow_date, $return_date, $status, $student_id);
             $this->borrowManager->addBorrow($borrow);
             header('location:index.php?page=list-borrow');
         }
