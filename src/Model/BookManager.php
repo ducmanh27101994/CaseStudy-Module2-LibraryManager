@@ -61,4 +61,22 @@ class BookManager
         $book = $statement->fetch();
         return $book;
     }
+    function search($keyword)
+    {
+        $sql = "SELECT * FROM `tbl_books` WHERE `book_name` LIKE :keyword ";
+        $statement = $this->database->prepare($sql);
+        $statement->bindValue(':keyword', '%' . $keyword . '%');
+        $statement->execute();
+        $data = $statement->fetchAll();
+        $books = [];
+        foreach ($data as $key => $item) {
+            $book = new Book($item['book_name'], $item['author'], $item['status'], $item['image'], $item['category_id']);
+            $book->setId($item['id']);
+            array_push($books, $book);
+        }
+        return $books;
+    }
 }
+// $controller = new BookManager();
+// var_dump($controller->search('Flying'));
+// die();
