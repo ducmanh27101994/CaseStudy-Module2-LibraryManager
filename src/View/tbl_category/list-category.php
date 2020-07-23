@@ -25,4 +25,10 @@
                     <td><?php echo ++$key ?></td>
                     <td><?php echo $category->getName() ?></td>
                     <td><?php echo $category->getComment() ?></td>
-                    <td><a href="index.php?page=update-category&id=<?php echo $category->getId() ?>" </td> </tr> <?php endforeach; ?> <?php endif; ?> </table> </body> </html>
+                    <td><a href="index.php?page=update-category&id=<?php echo $category->getId() ?>">Update</a></td>
+                </tr>
+            <?php endforeach; ?> <?php endif; ?>
+    </table>
+</body>
+
+</html>

@@ -12,7 +12,7 @@ class CategoryManager
     }
     function getAll()
     {
-        $sql = "SELECT * FROM tbl_category";
+        $sql = "SELECT * FROM `tbl_category` ORDER BY `id` DESC";
         $statement = $this->database->query($sql);
         $data = $statement->fetchAll();
         $listCategory = [];
@@ -35,6 +35,7 @@ class CategoryManager
     {
         $sql = "UPDATE `tbl_category` SET `category_name` = :name, `comment` = :comment WHERE `id` = :id";
         $statement = $this->database->prepare($sql);
+        $statement->bindParam(':id', $category->getId());
         $statement->bindParam(':name', $category->getName());
         $statement->bindParam(':comment', $category->getComment());
         $statement->execute();
