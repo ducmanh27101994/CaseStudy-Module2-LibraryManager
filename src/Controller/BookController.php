@@ -41,4 +41,12 @@ class BookController
             header('location:index.php?page=list-book');
         }
     }
+    function deleteBook()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+            $id = $_REQUEST['id'];
+            $this->bookManager->delete($id);
+            header('location:index.php?page=list-book');
+        }
+    }
 }

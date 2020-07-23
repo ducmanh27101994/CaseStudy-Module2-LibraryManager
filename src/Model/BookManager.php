@@ -34,4 +34,11 @@ class BookManager
         $statement->bindParam(':category_id', $book->getCategory_id());
         $statement->execute();
     }
+    function delete($id)
+    {
+        $sql = "DELETE FROM `tbl_books` WHERE `id` = :id";
+        $statement = $this->database->prepare($sql);
+        $statement->bindParam(':id', $id);
+        $statement->execute();
+    }
 }
