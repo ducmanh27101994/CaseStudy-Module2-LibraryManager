@@ -2,8 +2,11 @@
 
 <form method="post" action="index.php?page=search-borrow">
     <input type="text" name="keyword-borrow" placeholder="Search Borrow">
+    <button type="submit" name="search-borrow">Search</button>
 
-    <button type="submit">Search</button>
+    <input type="date" name="return_date1">
+    <input type="date" name="return_date2">
+    <button type="submit" name="search-date">Search</button>
     <button onclick="window.history.go(-1); return false;">Back</button>
 </form>
 
