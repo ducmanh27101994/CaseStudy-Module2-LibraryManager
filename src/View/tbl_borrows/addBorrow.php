@@ -16,5 +16,4 @@
     <button onclick="window.history.go(-1); return false;">Back</button>
 </form>
 
-<?php
     

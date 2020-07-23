@@ -46,6 +46,9 @@ $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : "";
         case 'list-borrow':
             $borrowController->viewAllBorrow();
             break;
+        case 'add-borrow':
+            $borrowController->addBorrow();
+            break;
         default:
             $studentController->viewStudent();
     }
