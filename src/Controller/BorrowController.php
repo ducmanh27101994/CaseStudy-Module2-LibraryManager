@@ -51,4 +51,24 @@ class BorrowController
         }
     }
 
+    function updateBorrow(){
+        if ($_SERVER['REQUEST_METHOD']=='GET'){
+            $id = $_REQUEST['id'];
+            $borrows = $this->borrowManager->getBorrowById($id);
+            include_once 'src/View/tbl_borrows/updateBorrow.php';
+        } else {
+            $id = $_REQUEST['id'];
+            $borrow_date = $_REQUEST['borrow_date'];
+            $return_date = $_REQUEST['return_date'];
+            $status = $_REQUEST['status'];
+            $student_id = $_REQUEST['student_id'];
+
+            $borrow = new Borrow($borrow_date,$return_date,$status,$student_id);
+            $borrow->setId($id);
+            $this->borrowManager->updateBorrow($borrow);
+            header('location:index.php?page=list-borrow');
+        }
+
+    }
+
 }
