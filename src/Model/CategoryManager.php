@@ -23,4 +23,12 @@ class CategoryManager
         }
         return $listCategory;
     }
+    function add($category)
+    {
+        $sql = "INSERT INTO `tbl_category` (`category_name`, `comment`) VALUES (:name, :comment)";
+        $statement = $this->database->prepare($sql);
+        $statement->bindParam(':name', $category->getName());
+        $statement->bindParam(':comment', $category->getComment());
+        $statement->execute();
+    }
 }
