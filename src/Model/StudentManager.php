@@ -12,7 +12,7 @@ class StudentManager
     }
     function getAll()
     {
-        $sql = "SELECT * FROM tbl_students";
+        $sql = "SELECT * FROM tbl_students ORDER BY `id` DESC";
         $statement = $this->database->query($sql);
         $data = $statement->fetchAll();
         $arr = [];
