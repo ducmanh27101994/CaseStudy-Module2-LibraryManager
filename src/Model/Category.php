@@ -10,10 +10,10 @@ class Category
     protected $name;
     protected $comment;
 
-    public function __construct($name,$comment)
+    public function __construct($name, $comment)
     {
-        $this->name=$name;
-        $this->comment=$comment;
+        $this->name = $name;
+        $this->comment = $comment;
     }
 
     /**
@@ -63,5 +63,4 @@ class Category
     {
         $this->comment = $comment;
     }
-
 }
