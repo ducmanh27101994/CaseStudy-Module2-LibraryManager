@@ -71,4 +71,13 @@ class DetailsController
         }
     }
 
+    function deleteDetail(){
+        if ($_SERVER['REQUEST_METHOD']=='GET'){
+            $book_id = $_REQUEST['book_id'];
+            $borrow_id = $_REQUEST['borrow_id'];
+            $this->detailManager->deleteDetail($book_id,$borrow_id);
+            header("location:index.php?page=detail-id&id=$borrow_id");
+        }
+    }
+
 }

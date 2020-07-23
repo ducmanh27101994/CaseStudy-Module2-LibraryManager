@@ -53,6 +53,14 @@ class DetailManager
         return $statement->fetchAll();
     }
 
+    function deleteDetail($book_id,$borrow_id){
+        $sql = "DELETE FROM `tbl_details` WHERE `book_id`=:book_id AND `borrow_id`=:borrow_id";
+        $statement = $this->databaseDetail->connect()->prepare($sql);
+        $statement->bindParam(':book_id',$book_id);
+        $statement->bindParam(':borrow_id',$borrow_id);
+        $statement->execute();
+    }
+
 
 
 }
