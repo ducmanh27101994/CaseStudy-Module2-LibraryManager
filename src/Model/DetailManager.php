@@ -21,5 +21,12 @@ class DetailManager
         $statement->execute();
     }
 
+    function viewListDetail(){
+        $sql = "SELECT * FROM `tbl_borrows` order by id desc ";
+        $statement = $this->databaseDetail->connect()->query($sql);
+        return $statement->fetchAll();
+    }
+
+
 
 }
