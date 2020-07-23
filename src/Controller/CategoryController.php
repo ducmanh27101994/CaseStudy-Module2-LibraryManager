@@ -40,6 +40,7 @@ class CategoryController
             $name = $_REQUEST['name'];
             $comment = $_REQUEST['comment'];
             $category = new Category($name, $comment);
+            $category->setId($id);
             $this->categoryManager->update($category);
             header('location:index.php?page=list-category');
         }
