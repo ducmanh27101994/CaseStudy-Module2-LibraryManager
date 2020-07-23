@@ -72,4 +72,12 @@ class BookController
             header('location:index.php?page=list-book');
         }
     }
+    function searchBook()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $keyword = $_POST['keyword'];
+            $books = $this->bookManager->search($keyword);
+            include_once('src/View/tbl_books/list-book.php');
+        }
+    }
 }

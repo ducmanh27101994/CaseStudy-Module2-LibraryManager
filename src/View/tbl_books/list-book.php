@@ -8,6 +8,10 @@
 </head>
 
 <body>
+    <form method="post">
+        <input type="text" name="keyword" />
+        <button type="submit">Search</button>
+    </form>
     <a href="index.php?page=add-book">Add Book</a>
     <table>
         <tr>
