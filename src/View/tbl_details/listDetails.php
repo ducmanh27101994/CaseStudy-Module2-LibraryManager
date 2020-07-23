@@ -29,6 +29,6 @@
             </tr>
         <?php endforeach; ?>
     <?php endif; ?>
-
 </table>
+<button onclick="window.history.go(-1); return false;">Back</button>
 
