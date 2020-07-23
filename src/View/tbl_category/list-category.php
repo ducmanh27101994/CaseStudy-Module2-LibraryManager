@@ -26,6 +26,7 @@
                     <td><?php echo $category->getName() ?></td>
                     <td><?php echo $category->getComment() ?></td>
                     <td><a href="index.php?page=update-category&id=<?php echo $category->getId() ?>">Update</a></td>
+                    <td><a href="index.php?page=delete-category&id=<?php echo $category->getId() ?>">Delete</a></td>
                 </tr>
             <?php endforeach; ?> <?php endif; ?>
     </table>

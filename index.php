@@ -46,6 +46,9 @@ $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : "";
         case 'update-category':
             $categoryController->updateCategory();
             break;
+        case 'delete-category':
+            $categoryController->deleteCategory();
+            break;
         case 'list-borrow':
             $borrowController->viewAllBorrow();
             break;
