@@ -45,4 +45,12 @@ class CategoryController
             header('location:index.php?page=list-category');
         }
     }
+    function deleteCategory()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+            $id = $_REQUEST['id'];
+            $this->categoryManager->delete($id);
+            header('location:index.php?page=list-category');
+        }
+    }
 }
