@@ -43,7 +43,7 @@ class Book
     /**
      * Get the value of book_name
      */
-    public function getBook_name()
+    public function getBookName()
     {
         return $this->book_name;
     }
@@ -53,7 +53,7 @@ class Book
      *
      * @return  self
      */
-    public function setBook_name($book_name)
+    public function setBookName($book_name)
     {
         $this->book_name = $book_name;
 
