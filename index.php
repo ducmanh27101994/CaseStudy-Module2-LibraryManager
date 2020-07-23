@@ -116,6 +116,9 @@ switch ($page) {
     case 'giveBookBack-detail':
         $detailController->showGiveBookBack();
         break;
+    case 'delete-detail':
+        $detailController->deleteDetail();;
+        break;
     default:
         $studentController->viewStudent();
 }
