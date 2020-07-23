@@ -40,6 +40,9 @@ $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : "";
         case 'list-category':
             $categoryController->viewCategory();
             break;
+        case 'add-category':
+            $categoryController->addCategory();
+            break;
         case 'list-borrow':
             $borrowController->viewAllBorrow();
             break;
