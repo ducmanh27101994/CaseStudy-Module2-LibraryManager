@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <a href="index.php?page=add-book">Add Book</a>
     <table>
         <tr>
             <th>STT</th>
@@ -15,7 +16,6 @@
             <th>Author</th>
             <th>Status</th>
             <th>Image</th>
-            <th>Category ID</th>
         </tr>
         <?php if (empty($books)) : ?>
             <tr>
@@ -29,7 +29,6 @@
                     <td><?php echo $book->getAuthor() ?></td>
                     <td><?php echo $book->getStatus() ?></td>
                     <td><img src="<?php echo $book->getImage() ?>" /></td>
-                    <td><?php echo $book->getCategory_id() ?></td>
                 </tr>
             <?php endforeach; ?>
         <?php endif; ?>
