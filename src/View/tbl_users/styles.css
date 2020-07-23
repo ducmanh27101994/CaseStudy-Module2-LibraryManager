@@ -3,11 +3,14 @@
 /*@import url('https://fonts.googleapis.com/css?family=Numans');*/
 
 html,body{
-    background-image: url('../../../uploads/VI3bcR.jpg');
+    background-image: url('../../../uploads/aatvos_Grünerløkka_Library-3.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
     font-family: 'Numans', sans-serif;
+}
+a{
+    color: #ffc107;
 }
 
 .container{
