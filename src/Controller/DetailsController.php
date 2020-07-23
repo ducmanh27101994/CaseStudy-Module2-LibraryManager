@@ -42,4 +42,13 @@ class DetailsController
         }
     }
 
+    function viewDetailById(){
+        if ($_SERVER['REQUEST_METHOD']=='GET'){
+            $id = $_REQUEST['id'];
+            $details = $this->detailManager->viewListDetailById($id);
+            include_once 'src/View/tbl_details/detailById.php';
+        }
+
+    }
+
 }
