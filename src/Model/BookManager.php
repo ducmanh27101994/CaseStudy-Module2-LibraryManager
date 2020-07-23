@@ -27,7 +27,7 @@ class BookManager
     {
         $sql = "INSERT INTO `tbl_books`(`book_name`, `author`, `status`, `image`, `category_id`) VALUES (:book_name,:author,:status,:image,:category_id)";
         $statement = $this->database->prepare($sql);
-        $statement->bindParam(':book_name', $book->getBook_name());
+        $statement->bindParam(':book_name', $book->getBookName());
         $statement->bindParam(':author', $book->getAuthor());
         $statement->bindParam(':status', $book->getStatus());
         $statement->bindParam(':image', $book->getImage());
@@ -41,4 +41,5 @@ class BookManager
         $statement->bindParam(':id', $id);
         $statement->execute();
     }
+    
 }

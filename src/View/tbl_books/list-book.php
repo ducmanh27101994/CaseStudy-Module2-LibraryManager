@@ -25,7 +25,7 @@
             <?php foreach ($books as $key => $book) : ?>
                 <tr>
                     <td><?php echo ++$key ?></td>
-                    <td><?php echo $book->getBook_name() ?></td>
+                    <td><?php echo $book->getBookName() ?></td>
                     <td><?php echo $book->getAuthor() ?></td>
                     <td><?php echo $book->getStatus() ?></td>
                     <td><img src="<?php echo $book->getImage() ?>" style="width: 50px; height: 70px" /></td>
