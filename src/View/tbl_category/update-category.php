@@ -11,7 +11,7 @@
     <form method="post">
         <input type="text" name="name" placeholder="category name" />
         <textarea name="comment" placeholder="comment"></textarea>
-        <button type="submit">Add Category</button>
+        <button type="submit">Update category</button>
     </form>
 </body>
 

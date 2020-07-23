@@ -14,7 +14,7 @@ class CategoryController
     }
     function viewCategory()
     {
-        $listManager = $this->categoryManager->getAll();
+        $categorys = $this->categoryManager->getAll();
         include_once('src/View/tbl_category/list-category.php');
     }
     function addCategory()
@@ -26,6 +26,21 @@ class CategoryController
             $comment = $_REQUEST['comment'];
             $category = new Category($name, $comment);
             $this->categoryManager->add($category);
+            header('location:index.php?page=list-category');
+        }
+    }
+    function updateCategory()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+            $id = $_REQUEST['id'];
+            $category = $this->categoryManager->getCategoryById($id);
+            include_once('src/View/tbl_category/update-category.php');
+        } else {
+            $id = $_REQUEST['id'];
+            $name = $_REQUEST['name'];
+            $comment = $_REQUEST['comment'];
+            $category = new Category($name, $comment);
+            $this->categoryManager->update($category);
             header('location:index.php?page=list-category');
         }
     }
