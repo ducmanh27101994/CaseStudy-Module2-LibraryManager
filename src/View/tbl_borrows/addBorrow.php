@@ -1,3 +1,4 @@
+
 <form method="post">
     <input type="datetime-local" name="borrow_date" placeholder="yyyy-mm-dd" required>
     <input type="datetime-local" name="return_date" placeholder="yyyy-mm-dd" required>
@@ -14,3 +15,6 @@
     <button type="submit">Submit</button>
     <button onclick="window.history.go(-1); return false;">Back</button>
 </form>
+
+<?php
+    
