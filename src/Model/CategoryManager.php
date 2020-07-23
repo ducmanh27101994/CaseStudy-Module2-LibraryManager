@@ -31,4 +31,20 @@ class CategoryManager
         $statement->bindParam(':comment', $category->getComment());
         $statement->execute();
     }
+    function update($category)
+    {
+        $sql = "UPDATE `tbl_category` SET `category_name` = :name, `comment` = :comment WHERE `id` = :id";
+        $statement = $this->database->prepare($sql);
+        $statement->bindParam(':name', $category->getName());
+        $statement->bindParam(':comment', $category->getComment());
+        $statement->execute();
+    }
+    function getCategoryById($id)
+    {
+        $sql = "SELECT * FROM `tbl_category` WHERE `id` = :id";
+        $statement = $this->database->prepare($sql);
+        $statement->bindParam(':id', $id);
+        $category = $statement->fetch();
+        return $category;
+    }
 }
