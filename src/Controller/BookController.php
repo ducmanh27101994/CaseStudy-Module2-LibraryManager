@@ -31,7 +31,6 @@ class BookController
             if (move_uploaded_file($file, $path))
                 echo 'Success upload file';
             else echo 'Fail to upload file';
-
             $book_name = $_REQUEST['book_name'];
             $author = $_REQUEST['author'];
             $status = $_REQUEST['status'];
@@ -62,7 +61,6 @@ class BookController
             if (move_uploaded_file($file, $path))
                 echo 'Success upload file';
             else echo 'Fail to upload file';
-
             $book_name = $_REQUEST['book_name'];
             $author = $_REQUEST['author'];
             $status = $_REQUEST['status'];
