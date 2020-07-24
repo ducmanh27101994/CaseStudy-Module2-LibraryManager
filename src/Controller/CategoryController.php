@@ -53,4 +53,12 @@ class CategoryController
             header('location:index.php?page=list-category');
         }
     }
+    function searchCategory()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $keyword = $_REQUEST['keyword'];
+            $categorys = $this->categoryManager->search($keyword);
+            include_once('src/View/tbl_category/list-category.php');
+        }
+    }
 }

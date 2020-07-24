@@ -71,6 +71,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         case 'delete-category':
             $categoryController->deleteCategory();
             break;
+        case 'search-category':
+            $categoryController->searchCategory();
+            break;
         case 'list-book':
             $bookController->viewBook();
             break;

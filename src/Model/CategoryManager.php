@@ -55,4 +55,19 @@ class CategoryManager
         $statement->bindParam(':id', $id);
         $statement->execute();
     }
+    function search($keyword)
+    {
+        $sql = "SELECT * FROM `tbl_category` WHERE `category_name` LIKE :keyword";
+        $statement = $this->database->prepare($sql);
+        $statement->bindValue(':keyword', '%' . $keyword . '%');
+        $statement->execute();
+        $data = $statement->fetchAll();
+        $listCategory = [];
+        foreach ($data as $item) {
+            $category = new Category($item['category_name'], $item['comment']);
+            $category->setId($item['id']);
+            array_push($listCategory, $category);
+        }
+        return $listCategory;
+    }
 }
