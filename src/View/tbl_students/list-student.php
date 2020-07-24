@@ -8,6 +8,10 @@
 </head>
 
 <body>
+    <form method="post" action="index.php?page=search-student">
+        <input type="text" name="keyword" placeholder="keyword" required />
+        <button type="submit">Search</button>
+    </form>
     <a href="index.php?page=add-student">Add Student</a>
     <table>
         <tr>

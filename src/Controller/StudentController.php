@@ -57,4 +57,12 @@ class StudentController
             header('location:index.php?page=list-student');
         }
     }
+    function searchStudent()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $keyword = $_REQUEST['keyword'];
+            $students = $this->studentManager->search($keyword);
+            include_once('src/View/tbl_students/list-student.php');
+        }
+    }
 }
