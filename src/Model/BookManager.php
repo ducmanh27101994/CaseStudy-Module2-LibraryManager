@@ -77,6 +77,3 @@ class BookManager
         return $books;
     }
 }
-// $controller = new BookManager();
-// var_dump($controller->search('Flying'));
-// die();

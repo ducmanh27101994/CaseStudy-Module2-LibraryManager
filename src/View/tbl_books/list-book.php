@@ -8,8 +8,8 @@
 </head>
 
 <body>
-    <form method="post">
-        <input type="text" name="keyword" />
+    <form method="post" action="index.php?page=search-book">
+        <input type="text" name="keyword" placeholder="keyword" />
         <button type="submit">Search</button>
     </form>
     <a href="index.php?page=add-book">Add Book</a>
