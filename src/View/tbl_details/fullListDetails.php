@@ -13,7 +13,7 @@
             <option value="BOOK BORROWS">Borrow Books</option>
             <option value="RETURN BOOKS BORROWS">Give Book Back</option>
         </select>
-        <button id="sb-borrow" class="btn btn-outline-secondary" type="submit">Submit</button>
+        <button id="sb-borrow" class="btn btn-secondary" type="submit">Submit</button>
     </form>
 </div>
 <br>
