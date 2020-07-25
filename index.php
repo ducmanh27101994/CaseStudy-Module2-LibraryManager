@@ -47,14 +47,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <link href="styles.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <title>Document</title>
 
 </head>
 
 <body>
     <?php include_once 'src/View/Menu/menu.php'; ?>
-    <br>
-    <div class="container">
+
     <?php
     switch ($page) {
         case 'list-student':
@@ -145,7 +145,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $studentController->viewStudent();
     }
     ?>
-    </div>
+
 </body>
 
 </html>
