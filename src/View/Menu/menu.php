@@ -39,7 +39,7 @@
                 </div>
             </li>
             <li class="nav-item">
-                <button class="btn btn-outline-danger" href="index.php?page=logOut">Log Out</button>
+                <a class="btn btn-outline-danger" href="index.php?page=logOut">Log Out</a>
             </li>
         </ul>
         <!--        <form class="form-inline my-2 my-lg-0">-->
