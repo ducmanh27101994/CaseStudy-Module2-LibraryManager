@@ -26,6 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } elseif ($checkBorrow === 'RETURN BOOKS BORROWS') {
         header('location:index.php?page=giveBookBack-detail');
     }
+
 }
 ?>
 <!doctype html>
@@ -144,6 +145,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         case 'register':
             include_once('src/View/tbl_users/register.php');
             break;
+        case 'searchId':
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $checkBorrow = $_POST['checkBorrow'];
+        if ($checkBorrow === 'test') {
+            $detailController->searchId();
+        }
+    }
+        break;
         default:
             $studentController->viewStudent();
     }
