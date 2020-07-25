@@ -141,6 +141,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         case 'logOut':
             $userController->logOut();
             break;
+        case 'register':
+            include_once('src/View/tbl_users/register.php');
+            break;
         default:
             $studentController->viewStudent();
     }

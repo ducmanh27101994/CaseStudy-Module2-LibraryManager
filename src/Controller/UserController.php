@@ -41,6 +41,4 @@ class UserController
             header('location:login.php');
         }
     }
-
-
 }
