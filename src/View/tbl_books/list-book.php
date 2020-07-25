@@ -27,7 +27,7 @@
 
 <div class="container">
     <h3>List Books</h3>
-<table class="table">
+<table class="table table-striped">
     <thead class="thead-dark">
     <tr>
         <th>STT</th>
