@@ -1,6 +1,6 @@
 body{
     font-size: 14px;
-    background-image: url("uploads/wizard-book.jpg");
+    background-image: url("uploads/12345.jpg");
     height: 100vh;
     background-size: cover;
     background-blend-mode: multiply;
@@ -110,4 +110,8 @@ a.add-button{
 
 #book-h3{
     color: #28a745;
+}
+
+#back-add{
+    margin-bottom:15px;
 }
