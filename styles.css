@@ -1,6 +1,9 @@
 body{
     font-size: 14px;
-    background-color: darkgray;
+    background-image: url("uploads/wizard-book.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-blend-mode: multiply;
 }
 
 .navbar-nav{
@@ -21,7 +24,7 @@ body{
 }
 
 .update-table{
-    color: #12df12;
+    color: #28a745;
 }
 
 .td-update{
@@ -37,7 +40,7 @@ body{
 }
 
 .add-button{
-    color: #12df12;
+    color: #28a745;
     font-size: 18px;
 }
 
@@ -91,4 +94,20 @@ a.add-button{
 
 .btn-outline-secondary{
     margin-bottom: auto;
+}
+
+#container-book{
+    border-radius: 10px;
+    width: 40%;
+    margin-bottom: 150px;
+}
+
+#add-all{
+    margin-bottom: 15px;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+#book-h3{
+    color: #28a745;
 }

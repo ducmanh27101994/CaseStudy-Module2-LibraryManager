@@ -19,12 +19,12 @@
         </div>
         <div class="col-12 col-md-6">
             <form id="borrow" class="form-inline my-2 my-lg-0" method="post" action="index.php?page=search-borrow">
-                <input id="search-borrow" class="form-control form-control" type="text" name="keyword-borrow" placeholder="Search Borrow" required>
+                <input id="search-borrow" class="form-control form-control" type="text" name="keyword-borrow" placeholder="Search Borrow" >
                 <button class="btn btn-outline-secondary" type="submit" name="search-borrow">Search Borrow</button>
                 <br>
                 <br>
-                <input class="form-control form-control" type="date" name="return_date1" required>
-                <input class="form-control form-control" type="date" name="return_date2" required>
+                <input class="form-control form-control" type="date" name="return_date1" >
+                <input class="form-control form-control" type="date" name="return_date2" >
                 <button class="btn btn-outline-secondary" type="submit" name="search-date">Search Date</button>
 <!--                                <button class="btn btn-outline-secondary" onclick="window.history.go(-1); return false;">Back</button>-->
                 <br>
