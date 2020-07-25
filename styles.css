@@ -157,3 +157,11 @@ a.add-button{
 .btn-secondary{
     margin-bottom: auto;
 }
+
+a{
+    color: #ff00be;
+}
+
+.table td, .table th {
+    vertical-align: middle;
+}
