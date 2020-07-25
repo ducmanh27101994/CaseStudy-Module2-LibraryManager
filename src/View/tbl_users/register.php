@@ -55,7 +55,7 @@
                     <div class="card">
                         <div class="card-header">Register</div>
                         <div class="card-body">
-                            <form action="login.php" method="post">
+                            <form action="checkRegister.php" method="post">
                                 <div class="form-group row">
                                     <label for="username" class="col-md-4 col-form-label text-md-right">Username</label>
                                     <div class="col-md-6">

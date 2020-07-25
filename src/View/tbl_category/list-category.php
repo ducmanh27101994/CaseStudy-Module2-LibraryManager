@@ -15,8 +15,8 @@
             <form class="form-inline my-2 my-lg-0" method="post" action="index.php?page=search-category">
                 <input aria-label="Search" class="form-control mr-sm-2" type="text" name="keyword"
                        placeholder="Search Category">
-                <button id="search-category" class="btn btn-outline-secondary" type="submit">Search Category</button>
-                <button class="btn btn-outline-secondary" onclick="window.history.go(-1); return false;">Back</button>
+                <button id="search-category" class="btn btn-secondary" type="submit">Search Category</button>
+                <button class="btn btn-secondary" onclick="window.history.go(-1); return false;">Back</button>
             </form>
         </div>
     </div>
