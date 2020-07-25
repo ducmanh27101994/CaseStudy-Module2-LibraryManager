@@ -1,5 +1,8 @@
-<h2>Give Book Back</h2>
-<table>
+<br><br><br>
+<div class="container">
+<h3>Give Book Back</h3>
+<table class="table">
+    <thead class="thead-dark">
     <tr>
         <th>STT</th>
         <th>Card</th>
@@ -13,6 +16,8 @@
         <th>Borrow Date</th>
         <th>Return Date</th>
     </tr>
+    </thead>
+    <tbody>
     <?php if (empty($details)): ?>
         <tr>
             <th>
@@ -40,6 +45,8 @@
             </tr>
         <?php endforeach; ?>
     <?php endif; ?>
+    </tbody>
 </table>
-<button onclick="window.history.go(-1); return false;">Back</button>
-
+    <br>
+<button id="list-back" class="btn btn-secondary" onclick="window.history.go(-1); return false;">Back</button>
+</div>

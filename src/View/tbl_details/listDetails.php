@@ -1,6 +1,8 @@
-<h2>List Detail</h2>
-<br>
-<table>
+<br><br><br>
+<div class="container">
+<h3>List Detail</h3>
+<table class="table">
+    <thead class="thead-dark">
     <tr>
         <th>STT</th>
         <th>Card</th>
@@ -8,7 +10,8 @@
         <th>Date Borrow</th>
         <th>Return Borrow</th>
     </tr>
-
+    </thead>
+    <tbody>
     <?php if (empty($details)): ?>
         <tr>
             <th>
@@ -29,6 +32,8 @@
             </tr>
         <?php endforeach; ?>
     <?php endif; ?>
+    </tbody>
 </table>
-<button onclick="window.history.go(-1); return false;">Back</button>
-
+    <br>
+<button id="list-back" class="btn btn-secondary" onclick="window.history.go(-1); return false;">Back</button>
+</div>

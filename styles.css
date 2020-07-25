@@ -65,9 +65,30 @@ a.add-button{
 }
 
 .btn{
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .form-control{
-    font-size: 15px;
+    font-size: 14px;
+}
+
+#list-back{
+    margin-bottom: 15px;
+}
+
+#search-borrow{
+    width: 340px;
+}
+
+#borrow-fluid{
+    padding-top: 0px;
+}
+
+.form-control{
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.btn-outline-secondary{
+    margin-bottom: auto;
 }
