@@ -28,7 +28,7 @@
 
 
 <div class="container">
-    <h3>Category</h3>
+    <h3>List Category</h3>
 <table class="table">
     <thead class="thead-dark">
     <tr>
@@ -52,7 +52,8 @@
                 <td class="td-update"><a class="update-table" href="index.php?page=update-category&id=<?php echo $category->getId() ?>"><i class="fas fa-user-edit"></i>&nbsp;Update</a></td>
                 <td class="td-delete"><a class="delete-table" href="index.php?page=delete-category&id=<?php echo $category->getId() ?>"><i class="fas fa-calendar-times"></i>&nbsp;  Delete</a></td>
             </tr>
-        <?php endforeach; ?><?php endif;?>
+        <?php endforeach; ?>
+    <?php endif;?>
         </tbody>
 </table>
 </div>
