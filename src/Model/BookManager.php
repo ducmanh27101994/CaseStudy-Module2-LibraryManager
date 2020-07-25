@@ -49,7 +49,7 @@ class BookManager
         $statement->bindParam(':author', $book->getAuthor());
         $statement->bindParam(':status', $book->getStatus());
         $statement->bindParam(':image', $book->getImage());
-        $statement->bindParam(':category_id', $book->getCateory_id());
+        $statement->bindParam(':category_id', $book->getCategory_id());
         $statement->execute();
     }
     function getBookById($id)
