@@ -86,4 +86,14 @@ class DetailsController
         }
     }
 
+
+
+    function searchId(){
+        if ($_SERVER['REQUEST_METHOD']=='POST'){
+            $keyword = $_REQUEST['keyword'];
+            $details = $this->detailManager->searchId($keyword);
+            include_once 'src/View/tbl_details/fullListDetails.php';
+        }
+    }
+
 }

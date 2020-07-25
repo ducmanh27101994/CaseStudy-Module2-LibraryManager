@@ -138,9 +138,13 @@ a.add-button{
 
 .mb-3{
     width: 30%;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 #full{
     padding-top: 0px;
+}
+
+#search-full{
+    width: 30%;
 }
