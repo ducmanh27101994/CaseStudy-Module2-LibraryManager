@@ -49,5 +49,6 @@
 
 
         <button id="add-all" type="submit" class="btn btn-primary">Update Book</button>
+        <button id="back-add" class="btn btn-secondary" onclick="window.history.go(-1); return false;">Back</button>
     </form>
 </div>

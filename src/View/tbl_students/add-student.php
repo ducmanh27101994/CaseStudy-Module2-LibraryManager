@@ -38,5 +38,6 @@
 
 
         <button id="add-all" type="submit" class="btn btn-primary">Add Student</button>
+        <button id="back-add" class="btn btn-secondary" onclick="window.history.go(-1); return false;">Back</button>
     </form>
 </div>
