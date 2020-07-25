@@ -4,11 +4,11 @@ body{
 }
 
 .navbar-nav{
-    margin-left: 68px;
+    margin-left: 78px;
 }
 
 .btn-outline-danger{
-    margin-left: 427px;
+    margin-left: 450px;
 }
 
 .action{
@@ -41,6 +41,10 @@ body{
     font-size: 18px;
 }
 
+a.add-button{
+    margin-left: 25px;
+}
+
 .container-fluid{
     background-color: white;
     padding-left: 77px;
@@ -58,4 +62,12 @@ body{
 
 #search-category {
     margin-right: 5px;
+}
+
+.btn{
+    font-size: 15px;
+}
+
+.form-control{
+    font-size: 15px;
 }
