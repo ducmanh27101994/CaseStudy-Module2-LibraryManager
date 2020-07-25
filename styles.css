@@ -115,3 +115,32 @@ a.add-button{
 #back-add{
     margin-bottom:15px;
 }
+
+#table-id{
+    margin-bottom: 15px;
+}
+
+#idTable{
+    width: 55%;
+}
+
+#button-id{
+    padding-left: 0px;
+    margin-left: 0px;
+}
+
+#sb-borrow {
+    margin-left: 5px;
+    width: 8%;
+    height: 38px;
+    margin-bottom: 16px;
+}
+
+.mb-3{
+    width: 30%;
+    font-size: 14px;
+}
+
+#full{
+    padding-top: 0px;
+}
