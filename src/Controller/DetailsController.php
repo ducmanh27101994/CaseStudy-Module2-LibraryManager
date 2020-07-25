@@ -95,5 +95,27 @@ class DetailsController
             include_once 'src/View/tbl_details/fullListDetails.php';
         }
     }
+    function searchCategory(){
+        if ($_SERVER['REQUEST_METHOD']=='POST'){
+            $keyword = $_REQUEST['keyword'];
+            $details = $this->detailManager->searchCategory($keyword);
+            include_once 'src/View/tbl_details/fullListDetails.php';
+        }
+    }
+    function searchBookName(){
+        if ($_SERVER['REQUEST_METHOD']=='POST'){
+            $keyword = $_REQUEST['keyword'];
+            $details = $this->detailManager->searchBookName($keyword);
+            include_once 'src/View/tbl_details/fullListDetails.php';
+        }
+    }
+    function searchStudentName(){
+        if ($_SERVER['REQUEST_METHOD']=='POST'){
+            $keyword = $_REQUEST['keyword'];
+            $details = $this->detailManager->searchStudentName($keyword);
+            include_once 'src/View/tbl_details/fullListDetails.php';
+        }
+    }
+
 
 }

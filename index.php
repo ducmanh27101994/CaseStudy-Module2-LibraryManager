@@ -148,8 +148,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         case 'searchId':
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $checkBorrow = $_POST['checkBorrow'];
-        if ($checkBorrow === 'test') {
+        if ($checkBorrow === 'card') {
             $detailController->searchId();
+        } elseif ($checkBorrow ==='category'){
+            $detailController->searchCategory();
+        } elseif ($checkBorrow==='book'){
+            $detailController->searchBookName();
+        } elseif ($checkBorrow==='student'){
+            $detailController->searchStudentName();
         }
     }
         break;

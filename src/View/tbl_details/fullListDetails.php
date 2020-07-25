@@ -10,9 +10,12 @@
     <br>
     <form method="post" action="index.php?page=searchId">
         <select class="custom-select custom-select-lg mb-3" name="checkBorrow">
+            <option value="card">Card Number</option>
+            <option value="category">Category</option>
+            <option value="student">Student</option>
+            <option value="book">Book</option>
             <option value="BOOK BORROWS">Borrow Books</option>
             <option value="RETURN BOOKS BORROWS">Give Book Back</option>
-            <option value="test">Card Number</option>
         </select>
 
             <input id="search-full" aria-label="Search" class="form-control mr-sm-2" type="text" name="keyword"
