@@ -45,6 +45,7 @@ class CategoryManager
         $sql = "SELECT * FROM `tbl_category` WHERE `id` = :id";
         $statement = $this->database->prepare($sql);
         $statement->bindParam(':id', $id);
+        $statement->execute();
         $category = $statement->fetch();
         return $category;
     }
