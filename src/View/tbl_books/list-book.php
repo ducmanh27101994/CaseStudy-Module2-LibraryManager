@@ -50,7 +50,7 @@
                 <td><?php echo $book->getStatus() ?></td>
                 <td><img src="<?php echo $book->getImage() ?>" style="width: 55px; height: 65px"/></td>
                 <td class="td-update"><a class="update-table" href="index.php?page=update-book&id=<?php echo $book->getId() ?>"><i class="fas fa-user-edit"></i>&nbsp;Update</a></td>
-                <td class="td-delete"><a class="delete-table" href="index.php?page=delete-book&id=<?php echo $book->getId() ?>"><i class="fas fa-calendar-times"></i>&nbsp;  Delete</a></td>
+                <td class="td-delete"><a class="delete-table" onclick="return confirm('Are you sure')" href="index.php?page=delete-book&id=<?php echo $book->getId() ?>"><i class="fas fa-calendar-times"></i>&nbsp;  Delete</a></td>
             </tr>
         <?php endforeach; ?>
     <?php endif; ?>
