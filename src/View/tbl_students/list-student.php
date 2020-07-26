@@ -50,7 +50,7 @@
                 <td><?php echo $student->getPhone() ?></td>
                 <td><?php echo $student->getAddress() ?></td>
                 <td class="td-update"><a class="update-table" href="index.php?page=update-student&id=<?php echo $student->getId() ?>"><i class="fas fa-user-edit"></i>&nbsp;Update</a></td>
-                <td class="td-delete"><a class="delete-table" href="index.php?page=delete-student&id=<?php echo $student->getId() ?>"><i class="fas fa-calendar-times"></i>&nbsp;  Delete</a></td>
+                <td class="td-delete"><a class="delete-table" onclick="return confirm('Are you sure')" href="index.php?page=delete-student&id=<?php echo $student->getId() ?>"><i class="fas fa-calendar-times"></i>&nbsp;  Delete</a></td>
             </tr>
         <?php endforeach; ?>
     <?php endif; ?>
