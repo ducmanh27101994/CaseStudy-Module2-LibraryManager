@@ -23,8 +23,6 @@
 <br>
 
 
-
-
 <div class="container">
     <h3>List Books</h3>
 <table class="table table-striped">
@@ -50,7 +48,7 @@
                 <td><?php echo $book->getBookName() ?></td>
                 <td><?php echo $book->getAuthor() ?></td>
                 <td><?php echo $book->getStatus() ?></td>
-                <td><img src="<?php echo $book->getImage() ?>" style="width: 50px; height: 65px"/></td>
+                <td><img src="<?php echo $book->getImage() ?>" style="width: 55px; height: 65px"/></td>
                 <td class="td-update"><a class="update-table" href="index.php?page=update-book&id=<?php echo $book->getId() ?>"><i class="fas fa-user-edit"></i>&nbsp;Update</a></td>
                 <td class="td-delete"><a class="delete-table" href="index.php?page=delete-book&id=<?php echo $book->getId() ?>"><i class="fas fa-calendar-times"></i>&nbsp;  Delete</a></td>
             </tr>
