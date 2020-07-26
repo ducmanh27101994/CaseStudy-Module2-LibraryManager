@@ -45,6 +45,7 @@ class BookManager
     {
         $sql = "UPDATE `tbl_books` SET `book_name`=:book_name,`author`=:author,`status`=:status,`image`=:image,`category_id`=:category_id WHERE `id` = :id";
         $statement = $this->database->prepare($sql);
+        $statement->bindParam(':id',$book->getId());
         $statement->bindParam(':book_name', $book->getBookName());
         $statement->bindParam(':author', $book->getAuthor());
         $statement->bindParam(':status', $book->getStatus());

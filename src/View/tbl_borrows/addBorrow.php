@@ -40,7 +40,7 @@
         </div>
 
         <div class="form-group">
-            <label for="sel1">Category list:</label>
+            <label for="sel1">Student list:</label>
             <select name="student_id" class="form-control" id="sel1">
                 <?php foreach ($students as $key => $student): ?>
                     <option value="<?php echo $student->getId(); ?>"><?php echo $student->getName()." - " .$student->getClass(); ?></option>
