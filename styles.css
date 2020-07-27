@@ -10,7 +10,7 @@ body{
     margin-left: 78px;
 }
 
-.btn-outline-danger{
+.btn-danger{
     margin-left: 450px;
 }
 
@@ -164,4 +164,12 @@ a{
 
 .table td, .table th {
     vertical-align: middle;
+}
+#search-full, #sb-borrow{
+    width:100%;
+}
+
+#box-select{
+    font-size: 14px;
+    height: 35px;
 }

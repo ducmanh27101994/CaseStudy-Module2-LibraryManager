@@ -9,19 +9,27 @@
 <div id="full" class="container-fluid">
     <br>
     <form method="post" action="index.php?page=searchId">
-        <select class="custom-select custom-select-lg mb-3" name="checkBorrow">
-            <option value="card">Card Number</option>
-            <option value="category">Category</option>
-            <option value="student">Student</option>
-            <option value="book">Book</option>
-            <option value="BOOK BORROWS">Borrow Books</option>
-            <option value="RETURN BOOKS BORROWS">Give Book Back</option>
-        </select>
+        <div class="row">
+            <div class="col-md-2">
+                <select id="box-select" class="custom-select custom-select-lg" name="checkBorrow">
+                    <option value="card">Card Number</option>
+                    <option value="category">Category</option>
+                    <option value="student">Student</option>
+                    <option value="book">Book</option>
+                    <option value="BOOK BORROWS">Borrow Books</option>
+                    <option value="RETURN BOOKS BORROWS">Give Book Back</option>
+                </select>
+            </div>
+            <div class="col-md-2" >
+                <input id="search-full" aria-label="Search" class="form-control" type="text" name="keyword"
+                       placeholder="Search">
+            </div>
+            <div class="col-md-1">
+                <button id="sb-borrow" class="btn btn-secondary" type="submit">Submit</button>
+            </div>
+        </div>
 
-            <input id="search-full" aria-label="Search" class="form-control mr-sm-2" type="text" name="keyword"
-                   placeholder="Search">
 
-        <button id="sb-borrow" class="btn btn-secondary" type="submit">Submit</button>
 </form>
 </div>
 <br>
