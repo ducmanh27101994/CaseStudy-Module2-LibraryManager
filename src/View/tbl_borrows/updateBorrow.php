@@ -28,8 +28,8 @@
         <div class="form-group">
             <label for="sel1">Status:</label>
             <select name="status" class="form-control" id="sel1">
-                <option value="Borrow Books">Borrow Books</option>
                 <option value="Give Book Back">Give Book Back</option>
+<!--                <option value="Borrow Books">Borrow Books</option>-->
             </select>
         </div>
 
@@ -41,7 +41,6 @@
 <!--                --><?php //endforeach; ?>
 <!--            </select>-->
 <!--        </div>-->
-
 
         <button id="add-all" type="submit" class="btn btn-primary">Update Borrow</button>
         <button id="back-add" class="btn btn-secondary" onclick="window.history.go(-1); return false;">Back</button>
