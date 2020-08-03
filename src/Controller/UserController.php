@@ -38,7 +38,7 @@ class UserController
             $fullname = $_REQUEST['fullname'];
             $phone = $_REQUEST['phone'];
             $this->userManager->addUser($fullname,$username,$password,$phone);
-            header('location:login.php');
+            header('location:index.php');
         }
     }
 }

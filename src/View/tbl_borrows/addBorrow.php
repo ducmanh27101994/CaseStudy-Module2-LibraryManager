@@ -35,7 +35,7 @@
             <label for="sel1">Status:</label>
             <select name="status" class="form-control" id="sel1">
                 <option value="Borrow Books">Borrow Books</option>
-                <option value="Give Book Back">Give Book Back</option>
+<!--                <option value="Give Book Back">Give Book Back</option>-->
             </select>
         </div>
 

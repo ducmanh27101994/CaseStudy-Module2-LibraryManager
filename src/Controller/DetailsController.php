@@ -31,7 +31,8 @@ class DetailsController
             $book_id = $_REQUEST['book_id'];
             $borrow_id = $_REQUEST['borrow_id'];
             $this->detailManager->addDetail($book_id, $borrow_id);
-            header("location:index.php?page=detail-id&id=$borrow_id");
+//            header("location:index.php?page=detail-id&id=$borrow_id");
+            header("location:index.php?page=list-detail");
         }
     }
 

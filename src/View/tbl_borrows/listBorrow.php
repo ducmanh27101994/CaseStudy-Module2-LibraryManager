@@ -64,7 +64,7 @@
         <td><?php echo $borrow->getBorrowDate() ?></td>
         <td><?php echo $borrow->getReturnDate() ?></td>
         <td><?php echo $borrow->getStatus() ?></td>
-        <td class="td-update"><a class="update-table" href="index.php?page=update-borrow&id=<?php echo $borrow->getId() ?>"><i class="fas fa-user-edit"></i>&nbsp;Update</a></td>
+        <td class="td-update"><a class="update-table" href="index.php?page=update-borrow&id=<?php echo $borrow->getId() ?>"><i class="fas fa-user-edit"></i>&nbsp;Return Book</a></td>
         <td class="td-delete"><a class="delete-table" onclick="return confirm('Are you sure')" href="index.php?page=delete-borrow&id=<?php echo $borrow->getId() ?>"><i class="fas fa-calendar-times"></i>&nbsp;  Delete</a></td>
     </tr>
     <?php endforeach;?>
